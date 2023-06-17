@@ -6,7 +6,10 @@
   padding-right: 1em;
   justify-content: center;
 } */
-
+body {
+  padding: 0;
+  margin: 0;
+}
 .primary-navigation {
   list-style: none;
   /* display: flex; */
@@ -19,7 +22,18 @@
 
 .a-style {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  font-size: 130%;
+  font-weight: 100;
+}
+.img {
+  width: 100%;
+}
+
+.vid {
+  width: 50%;
 }
 
 .active {
@@ -27,15 +41,23 @@
   padding: 5%;
 }
 
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
 /* Additional styles for demonstration */
 .grid-hijo {
   padding: 1em;
-  background: #c4b1d8;
+  background: #b11f05;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-container {
   display: grid;
-  gap: 10px;
   grid-template-columns: repeat(8, 1fr);
   grid-template-areas:
     "a a b b c c d d"
@@ -49,34 +71,61 @@
 
 .grid-hijo:nth-child(1) {
   grid-area: a;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
 }
 .grid-hijo:nth-child(2) {
   grid-area: b;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
 }
 .grid-hijo:nth-child(3) {
   grid-area: c;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
 }
 .grid-hijo:nth-child(4) {
   grid-area: d;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
 }
 .grid-hijo:nth-child(5) {
   grid-area: e;
+  background: #130529;
 }
 .grid-hijo:nth-child(6) {
   grid-area: f;
+  background: #172f64;
 }
 .grid-hijo:nth-child(7) {
   grid-area: g;
+  font-size: 32px;
+  color: #000000;
+  background: #aec9ec;
 }
 .grid-hijo:nth-child(8) {
   grid-area: h;
+  background: #630000;
 }
 .grid-hijo:nth-child(9) {
   grid-area: i;
+  background: #130529;
 }
 .grid-hijo:nth-child(10) {
   grid-area: j;
+  background: #630000;
 }
 .grid-hijo:nth-child(11) {
   grid-area: k;
+  background: #ececec;
+}
+
+@media (max-width: 768px) {
+  .grid-hijo:nth-child(7) {
+    font-size: 10px;
+  }
+  .a-style {
+    font-size: 80%;
+    font-weight: 100;
+  }
 }
